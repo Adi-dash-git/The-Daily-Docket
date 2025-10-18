@@ -1,4 +1,9 @@
+h1 {
+  text-align: center;
+}
+
 p h2 {
   color: rgb(237, 6, 214);
   font-weight: bolder;
+  text-align: center;
 }

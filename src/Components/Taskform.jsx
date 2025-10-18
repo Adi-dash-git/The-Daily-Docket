@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function Taskform( {addTask} ) {
     const [task, setTask] = useState('');
-    const [priority, setPriority] = useState('Medium');
+    const [priority, setPriority] = useState('High');
     const [category, setCategory] = useState('General');
 
     const handlesubmit = (e) => {
@@ -11,23 +11,23 @@ export default function Taskform( {addTask} ) {
 
         //reset task
         setTask('');
-        setPriority('Medium');
+        setPriority('High');
         setCategory('General');
     }
 
     return(
-        <form onSubmit={handlesubmit}>
-            <div>
+        <form onSubmit={handlesubmit} className="task-form">
+            <div id="inp">
                 <input type="text" placeholder="Enter the task"
                 value={task}
                  onChange={ (e) => setTask(e.target.value)} />
                 <button type="submit">Add Task</button>
 
-                <h1> {task} {priority} {category} </h1>
+                {/* <h1> {task} {priority} {category} </h1> */}
 
             </div>
 
-            <div>
+            <div id="btns">
                 <select value={priority} onChange={ (e) => setPriority(e.target.value)}>
                     <option value="high">High</option>
                     <option value="medium">Medium</option>
