@@ -38,9 +38,7 @@ export default function App() {
         updateTask={updateTask}
         deleteTask={deleteTask} />
       <ProgressTracker tasks={tasks} />
-      {/* <button onClick={clearTasks}>Clear All Tasks</button> */}
       {tasks.length > 0 && (<button onClick={clearTask} className="clear-btn">Clear all tasks</button>)}
-
     </div>
   )
 }
